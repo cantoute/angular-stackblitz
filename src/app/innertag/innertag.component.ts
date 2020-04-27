@@ -9,10 +9,6 @@ import { InnertagService } from '../innertag.service';
 })
 
 export class InnertagComponent implements OnInit {
-  name = '';
-  uri = '';
-  title = '';
-  status = '';
   items : Innertag[];
 
 /*constructor(){
@@ -30,7 +26,7 @@ export class InnertagComponent implements OnInit {
 
   private refreshList(){
        this.innertagService.display().
-         subscribe(items => { console.log('iteration1'); console.log(items)} );
+         subscribe(items => { console.log('iteration1'); console.log(items.data); this.items = items.data; } );
   }
 
 
